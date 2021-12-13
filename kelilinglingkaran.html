@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Menghitung Luas dan keliling linkaran</h3>
+    Masukan jari-jari linkaran : <input type="number" value="" size="10" id="bil1">
+    <button onclick="hitung()">Hitung</button>
+    <br>
+     Hasil :<span id="hasil"></span>
+
+
+    <script>
+        function hitung(){
+            const PHI = 3.14 //Konstanta tidak bisa di ubah
+            let jari = document.getElementById("bil1").value;
+            console.log("Jari-Jari Lingkaran :"+jari);
+            let luas = PHI * jari*jari
+            let kil= 2.0 *PHI*jari
+            console.log("luas lingkaran :" + luas)
+            console.log("Keliling Lingkaran :"+ kil)
+            let area_hasil = document.getElementById("hasil");
+            area_hasil.innerHTML="Luas :"+luas+"\nkeliling :"+ kil;
+        }
+    </script>
+</body>
+</html>
